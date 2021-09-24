@@ -1,0 +1,41 @@
+jovyan@jupyter-grar6985:~/PE-4$ ./a.out
+. . . 
+. . . 
+. . . 
+It is Player 1s turn
+Please enter the column coordinate for your move (0-2): 1
+Please enter the row coordinate for your move (0-2): 1
+. . . 
+. X . 
+. . . 
+It is Player 2s turn
+Please enter the column coordinate for your move (0-2): 0
+Please enter the row coordinate for your move (0-2): 0
+O . . 
+. X . 
+. . . 
+It is Player 1s turn
+Please enter the column coordinate for your move (0-2): 1
+Please enter the row coordinate for your move (0-2): 0
+O X . 
+. X . 
+. . . 
+It is Player 2s turn
+Please enter the column coordinate for your move (0-2): 1
+Please enter the row coordinate for your move (0-2): 2
+O X . 
+. X . 
+. O . 
+It is Player 1s turn
+Please enter the column coordinate for your move (0-2): 2
+Please enter the row coordinate for your move (0-2): 2
+O X . 
+. X . 
+. O X 
+It is Player 2s turn
+Please enter the column coordinate for your move (0-2): 0
+Please enter the row coordinate for your move (0-2): 2
+O X . 
+. X . 
+O O X 
+It is Player 1s turn
