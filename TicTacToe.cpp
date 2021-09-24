@@ -2,7 +2,11 @@
 #include <vector>
 #include <string>
 
+/**
+    Displays the game board in the terminal window.
 
+    @param game_board A two dimentional vector corresponding to the game board.
+*/
 void DisplayBoard(std::vector<std::vector<std::string>> game_board){
     for (std::vector<std::string> i : game_board)
     {  
@@ -14,6 +18,11 @@ void DisplayBoard(std::vector<std::vector<std::string>> game_board){
     }
  }
 
+/**
+    Creates and returns a two dimentional board for an xox game.
+
+    @return game_board A two dimentional vector corresponding to the game board.
+*/
 std::vector<std::vector<std::string>> CreateBoard(){
     std::vector<std::vector<std::string>> board {
         {".", ".", "."},
