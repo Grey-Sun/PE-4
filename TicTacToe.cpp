@@ -2,6 +2,18 @@
 #include <vector>
 #include <string>
 
+
+void DisplayBoard(std::vector<std::vector<std::string>> game_board){
+    for (std::vector<std::string> i : game_board)
+    {  
+        for (std::string i2 : i)
+        {
+            std::cout << i2 << " ";
+        }   
+        std::cout << std::endl;
+    }
+ }
+
 std::vector<std::vector<std::string>> CreateBoard(){
     std::vector<std::vector<std::string>> board {
         {".", ".", "."},
@@ -11,16 +23,8 @@ std::vector<std::vector<std::string>> CreateBoard(){
     return board;
 }
 
-void DisplayBoard(std::vector<std::vector<std::string>> game_board){
-    for (int i = 0; i<3; i++){
-        for (int j = 0; j<3; j++){
-            std::cout << game_board[i][j] << "  ";
-        }
-        std::cout << std::endl;
-    }
-}
-
 int main(){
     std::vector<std::vector<std::string>> game_board = CreateBoard();
+    DisplayBoard(game_board);
     return 0;
 }
