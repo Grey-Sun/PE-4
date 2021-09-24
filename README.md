@@ -7,6 +7,6 @@ Player1: Grayson
 Player2: Simon
 
 This program is a simple tic tac toe game. 
-To run the program, simply compile the TicTocApp.cpp file 
+To run the program, simply compile the TicTacToe.cpp file 
 and run the a.out file. 
 
