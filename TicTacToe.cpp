@@ -1,6 +1,10 @@
 #include <iostream>
 #include <vector>
 #include <string>
+/*
+Simon Israily and Grayson Arstingstall
+PE4 CSCI 3010 Fall 2021
+*/
 
 /**
     Displays the game board in the terminal window.
@@ -46,6 +50,11 @@ void PlaceMarker(std::vector<int> location, std::string marker, std::vector<std:
 }
 
 
+/**
+    Takes a board 2D vector and returns a integer vector with a row and column value.
+    
+    @param board is the 2D game board 
+*/
 std::vector<int> GetPlayerChoice(std::vector<std::vector<std::string>> board) {
     while (true){ //set infinite condition to keep looping
         std::vector<int> coordinate;
@@ -60,12 +69,31 @@ std::vector<int> GetPlayerChoice(std::vector<std::vector<std::string>> board) {
             coordinate.push_back(column);
             return coordinate; //exit the loop
         }
+        std::cout << "Invalid location, please pick a new spot on the board" << std::endl;
     }
 }
-
+//main game flow 
 int main(){
-    std::vector<std::vector<std::string>> game_board = CreateBoard();
-    PlaceMarker(std::vector<int>{0,0},"x",game_board);
-    DisplayBoard(game_board);
+    std::vector<std::vector<std::string>> game_board = CreateBoard(); //make an empty board
+    int counter = 0;
+    while(true) { //infinite loop to keep the game going until no one can make a move
+        DisplayBoard(game_board); //display the board before the turn
+        if (counter % 2 == 0){ //even counter number
+            std::cout << "It is Player 1s turn" << std::endl;
+            std::vector<int> choice = GetPlayerChoice(game_board); //get the player choice for the move
+            PlaceMarker(choice, "X", game_board); //place an X at the point on the board
+        }
+        else{
+            std::cout << "It is Player 2s turn" << std::endl;
+            std::vector<int> choice = GetPlayerChoice(game_board); //get player choice
+            PlaceMarker(choice, "O", game_board); //place an O in that spot on the board
+        }
+        if(counter > 9){ //if the board is full
+            break;
+        }
+        counter++; //increment the counter
+    }
+        
+        
     return 0;
 }
