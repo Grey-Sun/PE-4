@@ -23,10 +23,22 @@ std::vector<std::vector<std::string>> CreateBoard(){
     return board;
 }
 
+/**
+    Takes a location to play and a marker to place their and updates the board 
+    at the specified location with the specified marker.
+    
+    @param location A  vector with row and column where the user would like to go
+    @param marker A string marker corresponding to x or o, depending on who the user is.
+    @param game_board 2d vector correspondign the the game board.
+*/
+void PlaceMarker(std::vector<int> location, std::string marker, std::vector<std::vector<std::string>> &game_board){
+    game_board.at(location.front()).at(location.back()) = marker;
+}
 
 
 int main(){
     std::vector<std::vector<std::string>> game_board = CreateBoard();
+    PlaceMarker(std::vector<int>{0,0},"x",game_board);
     DisplayBoard(game_board);
     return 0;
 }
